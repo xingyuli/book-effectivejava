@@ -7,13 +7,15 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import org.junit.Test;
 import org.swordess.effectivejava.chapter5.use_bounded_wildcard.DataStructureUtils.Prefer;
 
-import junit.framework.TestCase;
+import static junit.framework.Assert.*;
 
-public class DataStructureUtilsTest extends TestCase {
+public class DataStructureUtilsTest {
 
-	public void testSetBothNotEmpty() {
+	@Test
+	public void setBothNotEmpty() {
 		Set<String> s1 = new HashSet<String>();
 		s1.add("today");
 		s1.add("now");
@@ -39,7 +41,8 @@ public class DataStructureUtilsTest extends TestCase {
 		assertTrue(union.contains("just now"));
 	}
 	
-	public void testSetWithOneEmpty() {
+	@Test
+	public void setWithOneEmpty() {
 		Set<String> s1 = null;
 		
 		Set<String> s2 = new HashSet<String>();
@@ -59,7 +62,8 @@ public class DataStructureUtilsTest extends TestCase {
 		assertTrue(union.contains("now"));
 	}
 	
-	public void testListBothNotEmpty() {
+	@Test
+	public void listBothNotEmpty() {
 		List<String> l1 = new ArrayList<String>();
 		l1.add("today");
 		l1.add("now");
@@ -87,7 +91,8 @@ public class DataStructureUtilsTest extends TestCase {
 		assertTrue(union.contains("just now"));
 	}
 	
-	public void testListWithOneEmpty() {
+	@Test
+	public void listWithOneEmpty() {
 		List<String> l1 = null;
 		
 		List<String> l2 = new ArrayList<String>();
@@ -108,7 +113,8 @@ public class DataStructureUtilsTest extends TestCase {
 		assertTrue(union.contains("now"));
 	}
 	
-	public void testMapBothNotEmpty() {
+	@Test
+	public void mapBothNotEmpty() {
 		Map<String, String> m1 = new HashMap<String, String>();
 		m1.put("aaa", "111");
 		m1.put("bbb", "bValue in map1");
@@ -150,7 +156,8 @@ public class DataStructureUtilsTest extends TestCase {
 		assertTrue(unionPreferLater.containsKey("two") && unionPreferLater.get("two").equals("2"));
 	}
 	
-	public void testMapWithOneEmpty() {
+	@Test
+	public void mapWithOneEmpty() {
 		Map<String, String> m1 = null;
 		
 		Map<String, String> m2 = new HashMap<String, String>();
