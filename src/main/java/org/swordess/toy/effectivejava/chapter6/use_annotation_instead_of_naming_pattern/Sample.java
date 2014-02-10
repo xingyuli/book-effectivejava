@@ -1,0 +1,28 @@
+package org.swordess.toy.effectivejava.chapter6.use_annotation_instead_of_naming_pattern;
+
+public class Sample {
+
+	@Test public static void m1() {}	// Test should pass
+
+	public static void m2() {}
+
+	@Test
+	public static void m3() {			// Test should fail
+		throw new RuntimeException("Boom");
+	}
+
+	public static void m4() {}
+
+	@Test
+	public void m5() {}					// INVALID USE: non-static method
+
+	public static void m6() {}
+
+	@Test
+	public static void m7() {			// Test should fail
+		throw new RuntimeException("Crash");
+	}
+
+	public static void m8() {}
+
+}
