@@ -1,5 +1,7 @@
 package org.swordess.toy.effectivejava.chapter9;
 
+import java.util.Arrays;
+
 import org.junit.Test;
 
 public class AvoidToUseUnnecessaryCheckedException {
@@ -62,7 +64,7 @@ class MyClass {
 		if (null == args) {
 			throw new TheCheckedExcpetion("args should not be null");
 		}
-		System.out.println(args);
+		System.out.println(Arrays.toString(args));
 	}
 
 }
@@ -77,7 +79,7 @@ class MyRefactoredClass {
 		if (null == args) {
 			throw new TheUncheckedExcpetion("args should not be null");
 		}
-		System.out.println(args);
+		System.out.println(Arrays.toString(args));
 	}
 
 }
