@@ -64,7 +64,7 @@ public final class PhoneNumber implements Comparable<PhoneNumber> {
 	 */
 	@Override
 	public String toString() {
-		return String.format("(%3d) %3d-%04d", areaCode);
+		return String.format("(%3d) %3d-%04d", areaCode, prefix, lineNumber);
 	}
 	
 	/*
